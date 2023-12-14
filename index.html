@@ -8,7 +8,8 @@
        AFRAME.registerComponent('mytarget', {
         init: function () {
           this.el.addEventListener('targetFound', event => {
-            console.log("target found");
+          console.log("target found");
+          this.el.setAttribute('animation-mixer', {clip: '*', loop: 'once'});
             
           });
           this.el.addEventListener('targetLost', event => {
